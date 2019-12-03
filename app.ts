@@ -12,7 +12,50 @@
     //good practice
     const person = {
     name: 'Michael',
-    age: 34
+    age: 34,
+    hobbies: ['Reading', 'Music']
 };
+
+let favoriteActivites: string[];
+//this would create an error:
+// favoriteActivites = sports;
+//this would not
+// favoriteActivites = ['Reading', 'Music']
+
+let bestActivities: any[];
+bestActivities = ['Fun times', 12];
+//any should only be used when needed
+
+for (const hobby of person.hobbies) {
+    //can use methods that work on inferred types
+    console.log(hobby.toUpperCase());
+    //map will not work on strings, this would be an error
+    // console.log(hobby.map());
+}
+
+
+//nested objects work as you would expect:
+
+// const product = {
+//     id: 'example',
+//     price: 12.99,
+//     tags: ['great-offer', 'hot-and-new'],
+//     details: {
+//         title: 'Red Carpet',
+//         description: 'A great carpet - almost brand new!'
+//     }
+// }
+
+//type of the object:
+
+// {
+//     id: string;
+//     price: number;
+//     tags: string[],
+//     details: {
+//         title: string;
+//         description: string;
+//     }
+// }
 
 console.log(person.name);

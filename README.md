@@ -9,6 +9,7 @@ Existing types are going to be javascript types
 number - all numbers, no integers, floats, doubles, etc
 string - text 'hello world', "hello world", `` as well
 boolean - true, false
+Array - [1,2,3], can be flexible or strict
 
 ## Assignment note
 Typescript can infer assignment, so let thing = 5; would infer a number at initialization.

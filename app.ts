@@ -10,11 +10,21 @@
 //     age: number;
 // } = {
     //good practice
-    const person = {
+    const person: {
+        name: string;
+        age: number;
+        hobbies: string[];
+        //a tuple, first element is a number, second element is a string
+        role: [number, string];
+    } = {
     name: 'Michael',
     age: 34,
-    hobbies: ['Reading', 'Music']
+    hobbies: ['Reading', 'Music'],
+    role: [2, 'awesome']
 };
+
+//this will not work, as this is defined above
+// person.role = [0, 'adimin', 'user'];
 
 let favoriteActivites: string[];
 //this would create an error:

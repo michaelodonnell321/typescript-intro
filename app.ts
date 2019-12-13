@@ -10,4 +10,13 @@ function printThisResult(num: number): void {
     console.log(`Result: ${num}`);
 }
 
-console.log(printThisResult(add(5,12)));
+printThisResult(add(5,12));
+
+//function can be set as a type
+//combineValues accepts any function that takes two numbers and returns a number
+let combineValues: (a: number, b: number) => number;
+
+//set this equal to add, this fits as it takes two numbers and returns a number
+combineValues = add;
+
+console.log(combineValues(8, 8));
